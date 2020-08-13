@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="contactStyle.css" type="text/css" />
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <div class="headerContainer">
+      <div class="container">
+        <div class="menuNavBar">
+          <div id="stackOne">
+            <!-- Inserting logo here...-->
+            <div class="logoWrapper">
+              <img
+                id="logoPNGImg"
+                src="images/logo.png"
+                width="125px"
+                alt="Bean Brew Hut printed on a banner and is the company logo"
+              />
+            </div>
+
+            <div id="WebTitle">
+              <h1>Bean Brew Hut</h1>
+            </div>
+
+            <nav id="topFirstNavBar">
+              <ul>
+                <!--list item #1 - face icon-->
+                <li>
+                  <i id="faceIcon" class="material-icons md-48"><a href="index.html">face</a></i>
+                </li>
+                <!--list item #2 - shopping_cart icon-->
+                <li>
+                  <i id="cartIcon" class="material-icons md-48"
+                    ><a href="blog.html">shopping_cart</a></i
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <nav id="topSecondNavBar">
+            <ul>
+              <li><a href="#stackOne">Home</a></li>
+              <li><a href="#shoppingSection">Start Shopping</a></li>
+              <li><a href="#aboutUsSection">About us</a></li>
+              <li><a href="#SLSection">Store Locations</a></li>
+              <li><a href="#blogSection">Blogs</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <form
+      id="contactUsID"
+      name="Contact Us"
+      action="https://httpbin.org/post"
+      method="POST"
+      onSubmit="return getValidation();"
+    >
+      <!--Input First Name -->
+      <label for="firstName">First Name</label>
+      <input required type="text" name="firstName" id="givenFirstName" placeholder="John" /><br />
+
+      <!--Input Last Name -->
+      <label for="lastName">Last Name</label>
+      <input required type="text" name="lastName" id="givenLastName" placeholder="Smith" /><br />
+
+      <!--Input Email -->
+      <label for="email">Email</label>
+      <input
+        required
+        type="email"
+        name="email"
+        id="givenEmail"
+        placeholder="johnSmith@example.com"
+      /><br />
+
+      <!--Input Unit Number for address, This field is optional -->
+      <label for="unitNum">Unit Number</label>
+      <input type="text" name="unitNum" id="givenUnit" placeholder="69" /><br />
+
+      <!-- Input Street Number for address -->
+      <label for="streetNum">Street Number</label>
+      <input required type="text" name="streetNum" id="givenStreetNum" placeholder="1990" /><br />
+
+      <!-- Input Street Name for address -->
+      <label for="streetName">Street Name</label>
+      <input
+        required
+        type="text"
+        name="streetName"
+        id="givenStreetName"
+        placeholder="Wonka"
+      /><br />
+
+      <!-- Input City for address -->
+      <label for="city">City</label>
+      <input
+        required
+        type="text"
+        name="city"
+        id="givenCity"
+        pattern="^[a-zA-Z]+$"
+        placeholder="Toronto"
+      /><br />
+
+      <!--Input Postal Code for address-->
+      <label for="postalCode">Postal Code</label>
+      <input
+        required
+        type="text"
+        name="postalCode"
+        id="givenPostalCode"
+        placeholder="X1C2V2"
+      /><br />
+
+      <!--Drop down menu for provinces-->
+      <div class="contaierProvinces">
+        <label for="displayingProvinces">Select a province</label><br />
+        <select name="province" id="selectedProvince"></select>
+      </div>
+
+      <div class="radioContatiner">
+        <p>Please specify the following:</p>
+        <input type="radio" id="specificationQ" name="specification" value="Question" />
+        <label for="Question">Question</label><br />
+        <input type="radio" id="specificationC" name="specification" value="Comment" />
+        <label for="Comment">Comment(s)</label><br />
+        <input type="radio" id="specificationOP" name="specification" value="OrderProblem" />
+        <label for="OrderProblem">Order Problem ?</label>
+        <div class="triggerOrderNum"></div>
+      </div>
+
+      <div>
+        <label for="displayMessageTxtBox">Provide a message</label><br />
+        <input type="text" id="givenUserMessage" placeholder="I want refund for french press" />
+        <input type="hidden" id="studentID" name="smutharasan" value="137454195" />
+      </div>
+      <!-- Submission and Validation... -->
+      <input type="submit" value="Submit information" />
+      <button id="clearBTN">Clear</button>
+    </form>
+  </body>
+  <script src="contact.js"></script>
+</html>

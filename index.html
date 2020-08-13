@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>Bean Brew Hut</title>
+  </head>
+  <body>
+    <div class="headerContainer">
+      <div class="container">
+        <div class="menuNavBar">
+          <div id="stackOne">
+            <!-- Inserting logo here...-->
+            <div class="logoWrapper">
+              <img
+                id="logoPNGImg"
+                src="images/logo.png"
+                width="125px"
+                alt="Bean Brew Hut printed on a banner and is the company logo"
+              />
+            </div>
+
+            <div id="WebTitle">
+              <h1>Bean Brew Hut</h1>
+            </div>
+
+            <nav id="topFirstNavBar">
+              <ul>
+                <!--list item #1 - face icon-->
+                <li>
+                  <i id="faceIcon" class="material-icons md-48"><a href="index.html">face</a></i>
+                </li>
+                <!--list item #2 - shopping_cart icon-->
+                <li>
+                  <i id="cartIcon" class="material-icons md-48"
+                    ><a href="blog.html">shopping_cart</a></i
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <nav id="topSecondNavBar">
+            <ul>
+              <li><a href="#stackOne">Home</a></li>
+              <li><a href="#shoppingSection">Start Shopping</a></li>
+              <li><a href="#aboutUsSection">About us</a></li>
+              <li><a href="#SLSection">Store Locations</a></li>
+              <li><a href="#blogSection">Blogs</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="firstRow">
+          <div id="headerIntro" class="twoColumns">
+            <h1>Give your morning routine<br />a little more love<br />to coffee culture</h1>
+            <p>
+              Coffee is just not about stimulating you to go to Swork on a monday morning. Since,
+              Coffee culture has come a long way, give it some love by improving the quality of the
+              beverage whether Iced or Hot!
+            </p>
+          </div>
+
+          <div id="headerImg" class="twoColumns">
+            <img id="homeImage" src="images/rsz_nathan-dumlao-ja233skl330-unsplash.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="shoppingSection">
+      <aside class="sidebar is-visible">
+        <nav class="middleFirstNavBar">
+          <ul>
+            <li>
+              <i id="houseIcon" class="material-icons md-48"><a href="#stackOne">house</a></i>
+            </li>
+            <li>
+              <i id="infoIcon" class="material-icons md-48"><a href="#aboutUsSection">info</a></i>
+            </li>
+            <li>
+              <i id="locatorIcon" class="material-icons md-48"><a href="#SLSection">near_me</a></i>
+            </li>
+            <li>
+              <i id="blogIcon" class="material-icons md-48"><a href="#blogSection">article</a></i>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="shoppingContent">
+        <div class="topShoppingBarWrapper">
+          <span id="toggle-sidebar" class="material-icons">menu</span>
+          <h1 id="filterTitle">All Products:</h1>
+
+          <div class="filterBarWrapper">
+            <nav id="filterNavBar">
+              <ul>
+                <li>
+                  <button id="filterBtnNone">Show all</button>
+                  <!--<button id="filterBtnNone" onclick="products.getByCategory('all')"> Show all</button>-->
+                </li>
+                <li>
+                  <button id="filterBtnCoffeeBeans">Coffee Beans</button>
+                  <!--<button id="filterBtnCoffeeBeans" onclick="filterSelection('coffeeBeans')"> Coffee Beans</button>-->
+                </li>
+                <li>
+                  <button id="filterCoffeeEquip">Coffee Equipment</button>
+                  <!--<button id="filterCoffeeEquip" onclick="filterSelection('coffeeEquip')"> Coffee Equipment</button>-->
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <div id="shoppingRowContent" class="rowClass"></div>
+      </main>
+    </section>
+
+    <section id="aboutUsSection">
+      <button id="NavigateContactUsBTN">Contact Us</button>
+    </section>
+    <section id="blogSection"></section>
+    <section id="SLSection"></section>
+
+    <!-- END GRID -->
+    <footer>
+      <form action="https://formspree.io/mvowywke" method="POST">
+        <label>
+          Your email:
+          <input type="text" name="_replyto" />
+        </label>
+        <label>
+          Your message:
+          <textarea name="message"></textarea>
+        </label>
+
+        <!-- your other form fields go here -->
+
+        <button type="submit">Send</button>
+      </form>
+    </footer>
+    <script src="productsData.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
