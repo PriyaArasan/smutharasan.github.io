@@ -51,7 +51,8 @@ Filename: script.js
     },
 
     productToContainer: function (product) {
-      var rowDiv = document.getElementById('shoppingRowContent');
+      console.log('HELLO');
+      // var rowDiv = document.getElementById('shoppingRowContent');
       var columnDiv = document.createElement('div');
       var columContent = document.createElement('div');
 
@@ -59,6 +60,9 @@ Filename: script.js
       var displayProdDesc = document.createElement('p');
       var displayImg = document.createElement('img');
       var displayPrice = document.createElement('p');
+      var addToCartWrapper = document.createElement('p');
+      var addToCartBTN = document.createElement('button');
+      addToCartBTN.innerText = 'Add to Cart'
 
       if (product.productCategory === 'coffeeBeans') {
         columnDiv.className = 'columnClass coffeeBeansClass';
@@ -67,15 +71,6 @@ Filename: script.js
       }
 
       columContent.className = 'columnContentClass';
-      /**
-          <div class="column coffeeBeans">
-            <div class="content">
-              <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
-              <h4>Mountains</h4>
-              <p>Lorem ipsum dolor..</p>
-            </div>
-          </div>
-          */
 
       var tempProduct = {};
       tempProduct.code = product.code;
@@ -100,9 +95,12 @@ Filename: script.js
         }
       }
 
-      columContent.append(displayImg, displayProdName, displayPrice, displayProdDesc);
+      // <p><button>Add to Cart</button></p>
+      addToCartWrapper.appendChild(addToCartBTN)
+      columContent.append(displayImg, displayProdName, displayPrice, displayProdDesc, addToCartWrapper);
       columnDiv.appendChild(columContent);
-      rowDiv.appendChild(columnDiv);
+      // rowDiv.appendChild(columnDiv);
+      return columnDiv;
     },
 
     /**
@@ -112,9 +110,43 @@ Filename: script.js
      * you use `cardHelpers.clear()` to remove any existing rows before you do this.
      */
     productsToTable: function (products) {
+      var rowDiv = document.getElementById('shoppingRowContent');
       var card_bod = document.getElementById('shoppingRowContent');
       if (card_bod.children.length > 0) this.clearTable();
-      products.forEach(product => cardHelpers.productToContainer(product));
+      // products.forEach(product => cardHelpers.productToContainer(product));
+      // products.forEach(product =>  rowDiv.appendChild(cardHelpers.productToContainer(product)));
+      
+      for(var givenIndex = 0; givenIndex < products.length; givenIndex++)
+      {
+        if (givenIndex % 3 == 0) {
+            var individualRow = document.createElement('div');
+            individualRow.className = 'individualRowClass';
+            rowDiv.appendChild(individualRow);
+        }
+      }
+
+      var counter = 0;
+
+      var rowDivChildren = rowDiv.children;
+
+      for (var i = 0; i < rowDivChildren.length; i++) {
+        var eachChildDiv = rowDivChildren[i];
+        for(var secondIndex = counter; secondIndex < counter + 3; secondIndex++){
+          eachChildDiv.appendChild(cardHelpers.productToContainer(products[secondIndex]));
+        }
+        counter = counter + 3;
+        // Do stuff
+      }
+      // products.forEach((product, givenIndex) => {
+      //     else{
+            
+      //       //individualRow.appendChild(cardHelpers.productToContainer(product));
+      //       console.log('EXPANDING');
+
+      //     }
+      //     // rowDiv.appendChild(cardHelpers.productToContainer(product))
+      // });
+
     }
   };
 

@@ -7,18 +7,12 @@ Filename: contact.js
 (function () {
 
   var provincesArr = ['Manitoba', 'Ontario', 'Quebec', 'Nova Scotia', 'British Columbia', 'Prince Edward Island', 'Saskatchewan', 'Alberta', 'Newfoundland and Labrador', 'New Brunswick'];
-  // var numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
-
+  
   function getValidation() {
 
     var streetName = document.getElementById('givenStreetName').value.trim();
     var city = document.getElementById('givenCity').value.trim();
     var postalCode = document.getElementById('givenPostalCode').value.trim();
-
-    console.log(`Zip Code validation: ${getPostalCodeValidation(postalCode)}`);
-    console.log(`City validation: ${getCityValidation(city)}`);
-    console.log(`Street Name validation: ${getStreetNameValidation(streetName)}`);
-
     return false;
   }
 
@@ -89,13 +83,18 @@ Filename: contact.js
     };
 
     if (document.getElementById('specificationOP').checked === true) {
-
+      console.log('DO SOMETHING');
+      var orderNumberLabelJS = document.createElement('label');
       var txtBoxOrderNumber = document.createElement('input');
+      var lineBreak = document.createElement('br');
+
+      orderNumberLabelJS.for = 'obtainOrderNumber';
+
       txtBoxOrderNumber.id = 'givenOrderNumber';
       txtBoxOrderNumber.type = 'text';
       txtBoxOrderNumber.placeholder = 'AAABBB';
 
-      document.getElementsByClassName('triggerOrderNum').appendChild(txtBoxOrderNumber);
+      document.getElementsByClassName('triggerOrderNum').append(orderNumberLabelJS, lineBreak,txtBoxOrderNumber);
     } else {
       document.getElementsByClassName('triggerOrderNum').innerHMTL = '';
     }
