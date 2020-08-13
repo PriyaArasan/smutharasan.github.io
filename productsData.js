@@ -4,7 +4,7 @@ window.BBHData = [{
     productName: 'Triple B Blend',
     price: 31.12,
     productDescription: 'Try our Bean Brew Bold Blend i.e. dark roast coffee incorporated with nutty flavors',
-    img: 'TripleBBlend.png',
+    img: 'TripleBBlend.jpg',
     weight: 12
   },
 
