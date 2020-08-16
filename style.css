@@ -79,6 +79,7 @@ nav ul li {
 }
 
 #topSecondNavBar ul li a:hover {
+  cursor: pointer;
   transform: scale(1.3);
   z-index: 1000;
   background: rgb(42, 12, 12);
@@ -231,6 +232,7 @@ p {
 }
 
 #filterNavBar ul li button:hover {
+  cursor: pointer;
   transform: scale(1.3);
   z-index: 1000;
   background: rgb(42, 12, 12);
@@ -264,30 +266,47 @@ p {
 .columnClass {
   float: left;
   width: 33.33%;
+  height: 100%;
   /*display: none; /* Hide all elements by default */
 }
 
 .portofolioImages {
-  width: 100%;
+  margin: 20px;
+  width: 90%;
+  max-height: 70%;
 }
 
 .columnContentClass {
   background-color: #113e3a;
+  height: 98%;
   text-align: center;
   font-family: 'Alegreya', serif;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-evenly;
   margin: 3px;
 }
 
 .price {
+  color: white;
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+
+.productDescClass {
+  font-family: 'Space Mono', monospace;
   color: whitesmoke;
-  font-size: 31px;
 }
 
 .columnContentClass h4 {
   color:white;
+  font-size: 25px;
+  padding-bottom: 3px;
 }
 
 .columnContentClass button {
+  align-self: baseline;
   border: none;
   outline: 0;
   padding: 12px;
@@ -302,9 +321,61 @@ p {
 .columnContentClass button:hover {
   opacity: 0.7;
 }
-/*
-.rowClass:after {
+
+#footerID {
+  color: white;
+  background-color: #262626;
+}
+
+.socialMediaDisplay ul{
+  text-align: center;
+  list-style: none;
+  display: flex;
+}
+
+.socialMediaDisplay ul li{
+  position: relative;
+  display: block;
+  color: #666;
+  font-size: 30px;
+  height: 60px;
+  line-height: 60px;
+  width: 60px;
+  background: #171515;
+  border-radius: 50%;
+  margin: 0 15px;
+  cursor: pointer;
+  transition:0.5s;
+}
+
+.socialMediaDisplay ul li:before{
+  position: absolute;
   content: '';
-  display: table;
-  clear: both;
-}*/
+  top: 0;
+  left: 0;
+  height:100%;
+  width:100%;
+  /*background: #d35400;*/
+  border-radius: 50%;
+  z-index: -1;
+  transform: scale(0.9);
+  transition:0.5s;
+  
+}
+
+.socialMediaDisplay ul li:hover:before{
+  transform: scale(1.2);
+  box-shadow: 0 0 15px #d35400;
+  filter: blur(3px);
+  
+}
+.socialMediaDisplay ul li:hover{
+  color:#ffa502;
+  box-shadow: 0 0 15px #d35400;
+  text-shadow: 0 0 15px #d35400;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}

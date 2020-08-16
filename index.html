@@ -24,8 +24,12 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
       rel="stylesheet"
     />
-
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script src="https://kit.fontawesome.com/ 612fa9335b.js"></script>
+    
     <link rel="stylesheet" href="style.css" type="text/css" />
+
     <title>Bean Brew Hut</title>
   </head>
   <body>
@@ -121,15 +125,12 @@
               <ul>
                 <li>
                   <button id="filterBtnNone">Show all</button>
-                  <!--<button id="filterBtnNone" onclick="products.getByCategory('all')"> Show all</button>-->
                 </li>
                 <li>
                   <button id="filterBtnCoffeeBeans">Coffee Beans</button>
-                  <!--<button id="filterBtnCoffeeBeans" onclick="filterSelection('coffeeBeans')"> Coffee Beans</button>-->
                 </li>
                 <li>
                   <button id="filterCoffeeEquip">Coffee Equipment</button>
-                  <!--<button id="filterCoffeeEquip" onclick="filterSelection('coffeeEquip')"> Coffee Equipment</button>-->
                 </li>
               </ul>
             </nav>
@@ -145,9 +146,9 @@
     </section>
     <section id="blogSection"></section>
     <section id="SLSection"></section>
-
+    
     <!-- END GRID -->
-    <footer>
+    <footer id='footerID'>
       <form action="https://formspree.io/mvowywke" method="POST">
         <label>
           Your email:
@@ -157,13 +158,33 @@
           Your message:
           <textarea name="message"></textarea>
         </label>
-
-        <!-- your other form fields go here -->
-
         <button type="submit">Send</button>
       </form>
+      
+      <div class="socialMediaDisplay">
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/supriya.mutharasan"><i class="fa fa-facebook-f"></i></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/PriyaArasan1999"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/supsup_11/"><i class="fa fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/supriya-m-a2a276139/"><i class="fa fa-linkedin"></i></a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/c/supriyamutharasan/"><i class="fa fa-youtube"></i></a>
+          </li>
+        </ul>
+      </div>
     </footer>
     <script src="productsData.js"></script>
     <script src="script.js"></script>
   </body>
-</html>
+  </html>
+  
+  <!--
+  -->
