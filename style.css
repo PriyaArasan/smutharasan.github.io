@@ -363,16 +363,74 @@ p {
   
 }
 
+.socialMediaDisplay ul li:nth-child(1):before{
+  background: #abc3f3;
+}
+.socialMediaDisplay ul li:nth-child(2):before{
+  background: #1DA1F2;
+}
+.socialMediaDisplay ul li:nth-child(3):before{
+  background: #E1306C;
+}
+.socialMediaDisplay ul li:nth-child(5):before{
+  background: #2867B2;
+}
+.socialMediaDisplay ul li:nth-child(5):before{
+  background: #ff0000;
+}
+
 .socialMediaDisplay ul li:hover:before{
   transform: scale(1.2);
-  box-shadow: 0 0 15px #d35400;
+  /*box-shadow: 0 0 15px #d35400;*/
   filter: blur(3px);
   
 }
-.socialMediaDisplay ul li:hover{
-  color:#ffa502;
-  box-shadow: 0 0 15px #d35400;
-  text-shadow: 0 0 15px #d35400;
+
+.socialMediaDisplay ul li:nth-child(1):hover:before{
+  box-shadow: 0 0 15px #4267B2;
+  
+}
+.socialMediaDisplay ul li:nth-child(2):hover:before{
+  box-shadow: 0 0 15px #1DA1F2;
+  
+}
+.socialMediaDisplay ul li:nth-child(3):hover:before{
+  box-shadow: 0 0 15px #E1306C;
+  
+}
+.socialMediaDisplay ul li:nth-child(4):hover:before{
+  box-shadow: 0 0 15px #2867B2;
+  
+}
+.socialMediaDisplay ul li:nth-child(5):hover:before{
+  box-shadow: 0 0 15px #ff0000;
+  
+}
+
+.socialMediaDisplay ul li:nth-child(1):hover{
+  color:#456CBA;
+  box-shadow: 0 0 15px #4267B2;
+  text-shadow: 0 0 15px #4267B2;
+}
+.socialMediaDisplay ul li:nth-child(2):hover{
+  color:#26a4f2;
+  box-shadow: 0 0 15px #1DA1F2;
+  text-shadow: 0 0 15px #1DA1F2;
+}
+.socialMediaDisplay ul li:nth-child(3):hover{
+  color:#e23670;
+  box-shadow: 0 0 15px #E1306C;
+  text-shadow: 0 0 15px #E1306C;
+}
+.socialMediaDisplay ul li:nth-child(4):hover{
+  color:#2A6CBB;
+  box-shadow: 0 0 15px #2867B2;
+  text-shadow: 0 0 15px #2867B2;
+}
+.socialMediaDisplay ul li:nth-child(5):hover{
+  color:#FF1A1A;
+  box-shadow: 0 0 15px #FF0000;
+  text-shadow: 0 0 15px #FF0000;
 }
 
 a, a:hover, a:focus, a:active {
