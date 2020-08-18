@@ -325,6 +325,20 @@ p {
 #footerID {
   color: white;
   background-color: #262626;
+  height: 400px;
+  position: relative;
+}
+
+.subFooterTwo{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  text-align: center;
+  height: 50px;
+  color: #686868;
+  background: #343A40;
+  width:100%;
+  padding-top: 20px;
 }
 
 .socialMediaDisplay ul{

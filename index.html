@@ -33,7 +33,8 @@
     <title>Bean Brew Hut</title>
   </head>
   <body>
-    <div class="headerContainer">
+
+    <header class="headerContainer">
       <div class="container">
         <div class="menuNavBar">
           <div id="stackOne">
@@ -93,92 +94,104 @@
           </div>
         </div>
       </div>
-    </div>
+    </header>
 
-    <section id="shoppingSection">
-      <aside class="sidebar is-visible">
-        <nav class="middleFirstNavBar">
+    <div class="indexPageWrapper">
+
+      <section id="shoppingSection">
+        <aside class="sidebar is-visible">
+          <nav class="middleFirstNavBar">
+            <ul>
+              <li>
+                <i id="houseIcon" class="material-icons md-48"><a href="#stackOne">house</a></i>
+              </li>
+              <li>
+                <i id="infoIcon" class="material-icons md-48"><a href="#aboutUsSection">info</a></i>
+              </li>
+              <li>
+                <i id="locatorIcon" class="material-icons md-48"><a href="#SLSection">near_me</a></i>
+              </li>
+              <li>
+                <i id="blogIcon" class="material-icons md-48"><a href="#blogSection">article</a></i>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+  
+        <main class="shoppingContent">
+          <div class="topShoppingBarWrapper">
+            <span id="toggle-sidebar" class="material-icons">menu</span>
+            <h1 id="filterTitle">All Products:</h1>
+  
+            <div class="filterBarWrapper">
+              <nav id="filterNavBar">
+                <ul>
+                  <li>
+                    <button id="filterBtnNone">Show all</button>
+                  </li>
+                  <li>
+                    <button id="filterBtnCoffeeBeans">Coffee Beans</button>
+                  </li>
+                  <li>
+                    <button id="filterCoffeeEquip">Coffee Equipment</button>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+  
+          <div id="shoppingRowContent" class="rowClass"></div>
+        </main>
+      </section>
+  
+      <section id="aboutUsSection">
+        <button id="NavigateContactUsBTN">Contact Us</button>
+      </section>
+
+      <section id="blogSection"></section>
+      
+      <section id="SLSection"></section>
+      
+      <!-- END GRID -->
+    </div>
+    
+    <footer id='footerID'>
+      <div class="subFooterOne">
+        <form action="https://formspree.io/mvowywke" method="POST">
+          <label>
+            Your email:
+            <input type="text" name="_replyto" />
+          </label>
+          <label>
+            Your message:
+            <textarea name="message"></textarea>
+          </label>
+          <button type="submit">Send</button>
+        </form>
+        
+        <div class="socialMediaDisplay">
           <ul>
             <li>
-              <i id="houseIcon" class="material-icons md-48"><a href="#stackOne">house</a></i>
+              <a href="https://www.facebook.com/supriya.mutharasan"><i class="fa fa-facebook-f"></i></a>
             </li>
             <li>
-              <i id="infoIcon" class="material-icons md-48"><a href="#aboutUsSection">info</a></i>
+              <a href="https://twitter.com/PriyaArasan1999"><i class="fa fa-twitter"></i></a>
             </li>
             <li>
-              <i id="locatorIcon" class="material-icons md-48"><a href="#SLSection">near_me</a></i>
+              <a href="https://www.instagram.com/supsup_11/"><i class="fa fa-instagram"></i></a>
             </li>
             <li>
-              <i id="blogIcon" class="material-icons md-48"><a href="#blogSection">article</a></i>
+              <a href="https://www.linkedin.com/in/supriya-m-a2a276139/"><i class="fa fa-linkedin"></i></a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/c/supriyamutharasan/"><i class="fa fa-youtube"></i></a>
             </li>
           </ul>
-        </nav>
-      </aside>
-
-      <main class="shoppingContent">
-        <div class="topShoppingBarWrapper">
-          <span id="toggle-sidebar" class="material-icons">menu</span>
-          <h1 id="filterTitle">All Products:</h1>
-
-          <div class="filterBarWrapper">
-            <nav id="filterNavBar">
-              <ul>
-                <li>
-                  <button id="filterBtnNone">Show all</button>
-                </li>
-                <li>
-                  <button id="filterBtnCoffeeBeans">Coffee Beans</button>
-                </li>
-                <li>
-                  <button id="filterCoffeeEquip">Coffee Equipment</button>
-                </li>
-              </ul>
-            </nav>
-          </div>
         </div>
+      </div>
 
-        <div id="shoppingRowContent" class="rowClass"></div>
-      </main>
-    </section>
-
-    <section id="aboutUsSection">
-      <button id="NavigateContactUsBTN">Contact Us</button>
-    </section>
-    <section id="blogSection"></section>
-    <section id="SLSection"></section>
-    
-    <!-- END GRID -->
-    <footer id='footerID'>
-      <form action="https://formspree.io/mvowywke" method="POST">
-        <label>
-          Your email:
-          <input type="text" name="_replyto" />
-        </label>
-        <label>
-          Your message:
-          <textarea name="message"></textarea>
-        </label>
-        <button type="submit">Send</button>
-      </form>
-      
-      <div class="socialMediaDisplay">
-        <ul>
-          <li>
-            <a href="https://www.facebook.com/supriya.mutharasan"><i class="fa fa-facebook-f"></i></a>
-          </li>
-          <li>
-            <a href="https://twitter.com/PriyaArasan1999"><i class="fa fa-twitter"></i></a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/supsup_11/"><i class="fa fa-instagram"></i></a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/supriya-m-a2a276139/"><i class="fa fa-linkedin"></i></a>
-          </li>
-          <li>
-            <a href="https://www.youtube.com/c/supriyamutharasan/"><i class="fa fa-youtube"></i></a>
-          </li>
-        </ul>
+      <div class="subFooterTwo">
+        &copy; smutharasan.github.io | Created by Supriya Mutharasan 2020
       </div>
     </footer>
     <script src="productsData.js"></script>
