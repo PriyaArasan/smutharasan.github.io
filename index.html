@@ -95,10 +95,11 @@
         </div>
       </div>
     </header>
-
+    
     <div class="indexPageWrapper">
-
+      
       <section id="shoppingSection">
+        
         <aside class="sidebar is-visible">
           <nav class="middleFirstNavBar">
             <ul>
@@ -117,12 +118,13 @@
             </ul>
           </nav>
         </aside>
-  
+        
         <main class="shoppingContent">
+          
           <div class="topShoppingBarWrapper">
             <span id="toggle-sidebar" class="material-icons">menu</span>
             <h1 id="filterTitle">All Products:</h1>
-  
+            
             <div class="filterBarWrapper">
               <nav id="filterNavBar">
                 <ul>
@@ -139,35 +141,49 @@
               </nav>
             </div>
           </div>
-  
-          <div id="shoppingRowContent" class="rowClass"></div>
+          
+          <div id="shoppingRowContent" class="rowClass">
+            <!-- END GRID -->
+          </div>
+          
         </main>
       </section>
-  
+      
       <section id="aboutUsSection">
-        <button id="NavigateContactUsBTN">Contact Us</button>
-      </section>
 
+        <div class="firstRow">
+          
+          <!--
+
+            <div id="headerImg" class="twoColumns">
+              <img id="authorImage" src="images/19488813_1205596776236582_7214587370487800274_o.jpg" />
+            </div>
+            
+            <div id="headerIntro" class="twoColumns">
+              <h1>Give your morning routine<br />a little more love<br />to coffee culture</h1>
+              <p>
+                Coffee is just not about stimulating you to go to Swork on a monday morning. Since,
+                Coffee culture has come a long way, give it some love by improving the quality of the
+                beverage whether Iced or Hot!
+              </p>
+              <button id="NavigateContactUsBTN">Contact Us</button>
+            </div>
+          -->
+
+        </div>
+        
+      </section>
+      
       <section id="blogSection"></section>
       
       <section id="SLSection"></section>
       
-      <!-- END GRID -->
     </div>
     
     <footer id='footerID'>
+      
       <div class="subFooterOne">
-        <form action="https://formspree.io/mvowywke" method="POST">
-          <label>
-            Your email:
-            <input type="text" name="_replyto" />
-          </label>
-          <label>
-            Your message:
-            <textarea name="message"></textarea>
-          </label>
-          <button type="submit">Send</button>
-        </form>
+        
         
         <div class="socialMediaDisplay">
           <ul>
@@ -188,12 +204,26 @@
             </li>
           </ul>
         </div>
+        
+        <form  class="formMsgID" action="https://formspree.io/mvowywke" method="POST">
+          <label>
+            Your email:
+            <input type="text" name="_replyto" />
+          </label>
+          <label>
+            Your message:
+            <textarea name="message"></textarea>
+          </label>
+          <button type="submit">Send</button>
+        </form>
       </div>
-
+      
       <div class="subFooterTwo">
         &copy; smutharasan.github.io | Created by Supriya Mutharasan 2020
       </div>
+      
     </footer>
+    
     <script src="productsData.js"></script>
     <script src="script.js"></script>
   </body>
