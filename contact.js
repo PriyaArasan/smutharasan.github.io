@@ -13,12 +13,18 @@ Filename: contact.js
     var streetName = document.getElementById('givenStreetName').value.trim();
     var city = document.getElementById('givenCity').value.trim();
     var postalCode = document.getElementById('givenPostalCode').value.trim();
+    
+    console.log(`Phone Number validation: ${phoneValidation(phoneNumber)}`);
+    console.log(`Zip Code validation: ${getPostalCodeValidation(postalCode)}`);
+    console.log(`City validation: ${getCityValidation(city)}`);
+    console.log(`Street Name validation: ${getStreetNameValidation(streetName)}`);
+
     return false;
   }
 
   function clear() {
     var inputs = document.querySelectorAll('input');
-    inputs.innerHMTL = "";
+    inputs.innerHTML = "";
   }
 
   // Initiated when submit is clicked
@@ -41,6 +47,14 @@ Filename: contact.js
       option.innerHTML = province.toUpperCase();
       provinceElem.appendChild(option);
     });
+  }
+
+  function phoneValidation(phoneNumber) 
+  {
+    var pattern = /^[2-9]\d{2}-\d{3}-\d{4}$/;
+    if (!pattern.test(phoneNumber)) {
+        displayError(`The Phone Number must be in the following format: XXX-XXX-XXXX`);
+    } else return pattern.test(phoneNumber);
   }
 
   // the following function checks for valid postal code
@@ -82,23 +96,55 @@ Filename: contact.js
       return getValidation();
     };
 
-    if (document.getElementById('specificationOP').checked === true) {
+    // if (document.getElementById('specificationOP').checked === true) 
+    // {
+    //   console.log('DO SOMETHING');
+    //   var orderNumberLabelJS = document.createElement('label');
+    //   var txtBoxOrderNumber = document.createElement('input');
+    //   var lineBreak = document.createElement('br');
+
+    //   orderNumberLabelJS.for = 'obtainOrderNumber';
+
+    //   txtBoxOrderNumber.id = 'givenOrderNumber';
+    //   txtBoxOrderNumber.type = 'text';
+    //   txtBoxOrderNumber.placeholder = 'AAABBB';
+
+    //   document.getElementsByClassName('triggerOrderNum').append(orderNumberLabelJS, lineBreak,txtBoxOrderNumber);
+    // } else {
+    //   document.getElementsByClassName('triggerOrderNum').innerHTML = '';
+    // }
+    
+    addEventListener('DOMContentLoaded', function() {
+      document.getElementById('orderNumContainer').innerHTML = '';
+    });
+    
+    document.getElementById('specificationQ').addEventListener('change', function() {
+      document.getElementById('orderNumContainer').innerHTML = '';
+    });
+    
+    document.getElementById('specificationC').addEventListener('change', function() {
+      document.getElementById('orderNumContainer').innerHTML = '';
+    });
+    
+    document.getElementById('specificationOP').addEventListener('change', function() {
       console.log('DO SOMETHING');
+      document.getElementById('orderNumContainer').innerHTML = '';
+      var tester = document.getElementById('orderNumContainer');
       var orderNumberLabelJS = document.createElement('label');
       var txtBoxOrderNumber = document.createElement('input');
       var lineBreak = document.createElement('br');
-
+      
       orderNumberLabelJS.for = 'obtainOrderNumber';
+      orderNumberLabelJS.innerText = 'Order Number: ';
 
       txtBoxOrderNumber.id = 'givenOrderNumber';
       txtBoxOrderNumber.type = 'text';
       txtBoxOrderNumber.placeholder = 'AAABBB';
-
-      document.getElementsByClassName('triggerOrderNum').append(orderNumberLabelJS, lineBreak,txtBoxOrderNumber);
-    } else {
-      document.getElementsByClassName('triggerOrderNum').innerHMTL = '';
-    }
-
+      
+      tester.append(orderNumberLabelJS,lineBreak,txtBoxOrderNumber);
+      
+    });
+    
   };
-
+  
 })();
